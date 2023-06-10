@@ -9,6 +9,7 @@ const deleteComments = require('../controllers/deleteComments')
 
 router.post('/', async (req, res) => {
     try {
+        const id= 'wedwedwwwwwwwwwwwwwwww';
         const { creation_id, user_id, content, vote, img } = req.body;
         console.log({ creation_id, user_id, content, vote, img })
         const createAssessments = await newAssessments({ creation_id, user_id, content, vote, img })
