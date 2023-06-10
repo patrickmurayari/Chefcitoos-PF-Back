@@ -1,23 +1,23 @@
 module.exports = {
   "development": {
-    "username": "awschefcitoos",
-    "password": "chefcitoosdb",
-    "database": "chefcitoos",
-    "host": "database-1.cqawfiwiwudi.us-east-2.rds.amazonaws.com",
+    "username": process.env.DB_USERNAME,
+    "password": process.env.DB_PASSWORD,
+    "database": process.env.DB_DATABASE,
+    "host": process.env.DB_HOST ,
     "dialect": "postgres"
   },
   "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
-    "host": "127.0.0.1",
+    "username": process.env.DB_USERNAME || "root",
+    "password": process.env.DB_PASSWORD || null,
+    "database": process.env.DB_DATABASE || "database_production",
+    "host": process.env.DB_HOST || "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
+    "username":process.env.DB_USERNAME || "root",
+    "password": process.env.DB_PASSWORD || null,
+    "database": process.env.DB_DATABASE || "database_production",
+    "host": process.env.DB_HOST || "127.0.0.1",
     "dialect": "mysql"
   }
 }
